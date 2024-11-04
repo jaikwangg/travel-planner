@@ -17,6 +17,23 @@ const Login = () => {
     navigate("/calendar");
   };
 
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key && e.key.toLowerCase() === "enter") {
+      const form = document.querySelector("form");
+      if (form) {
+        form.requestSubmit();
+      }
+    }
+  };
+
+  // Add event listener on mount and remove it on unmount
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary to-secondary flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl p-8 w-full max-w-md animate-fade-up">
