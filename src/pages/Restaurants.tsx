@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { Restaurant } from "lucide-react";
+import { Utensils } from "lucide-react";
 
 interface RestaurantOption {
   id: string;
@@ -61,7 +61,7 @@ const RestaurantsPage = () => {
     <div className="min-h-screen bg-gray-50 p-4">
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 animate-fade-up">
         <div className="flex items-center justify-center mb-8">
-          <Restaurant className="h-12 w-12 text-secondary" />
+          <Utensils className="h-12 w-12 text-secondary" />
         </div>
         <h1 className="text-3xl font-bold text-center mb-8 text-primary">Select Restaurants</h1>
         
